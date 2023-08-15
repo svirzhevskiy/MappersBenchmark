@@ -56,5 +56,9 @@ public partial class MapperlyMapper
 Also has attributes for mapping. `[MapProperty(nameof(Car.ModelName), nameof(CarDto.Model))]`
 
 ## Under the hood
-### TinyMapper
-Internally, TinyMapper generates mapping code through ILGenerator. The mapping code looks almost the same as handwritten code.
+|        Mapper |      Runtime (Based on reflections and expressions) |    Source generation on compile time |
+|-------------- |----------:|---------:|
+|   AutoMapper | X |  |
+|    TinyMapper |  X |  |
+| Mapperly |  | X |
+| Mapster | | X |
