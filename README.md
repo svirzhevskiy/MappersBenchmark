@@ -1,12 +1,21 @@
 # MappersBenchmark
 
 ### Benchmark results:
-|        Method |      Mean |    Error |   StdDev |
-|-------------- |----------:|---------:|---------:|
-|   MapperlyMap |  92.12 ns | 0.208 ns | 0.184 ns |
-|    MapsterMap |  97.06 ns | 1.871 ns | 1.563 ns |
-| TinyMapperMap | 312.55 ns | 1.086 ns | 1.015 ns |
-| AutoMapperMap | 480.87 ns | 2.986 ns | 2.647 ns |
+|        Method |      N |             Mean |          Error |         StdDev |
+|-------------- |------- |-----------------:|---------------:|---------------:|
+|    MapsterMap |      1 |         85.92 ns |       1.123 ns |       0.877 ns |
+|   MapperlyMap |      1 |         86.37 ns |       1.752 ns |       3.696 ns |
+| TinyMapperMap |      1 |        279.12 ns |       5.532 ns |       9.543 ns |
+| AutoMapperMap |      1 |        481.19 ns |       8.593 ns |       8.038 ns |
+|    MapsterMap |    100 |      8,147.24 ns |      43.719 ns |      36.507 ns |
+|   MapperlyMap |    100 |      8,341.73 ns |      60.789 ns |      50.761 ns |
+| TinyMapperMap |    100 |     27,505.13 ns |     507.651 ns |     604.322 ns |
+| AutoMapperMap |    100 |     43,988.06 ns |     401.206 ns |     335.025 ns |
+|    MapsterMap | 100000 |  8,052,286.72 ns |  49,613.198 ns |  38,734.721 ns |
+|   MapperlyMap | 100000 |  8,094,055.83 ns |  68,997.214 ns |  64,540.037 ns |
+| TinyMapperMap | 100000 | 28,988,858.96 ns | 146,016.006 ns | 136,583.462 ns |
+| AutoMapperMap | 100000 | 43,895,552.78 ns | 340,027.317 ns | 318,061.763 ns |
+
 
 
 #### Legends
