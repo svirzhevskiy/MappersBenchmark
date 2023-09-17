@@ -34,28 +34,43 @@ public class MappersBenchmark
         //mapperly maper
         _mapperlyMapper = new MapperlyMapper();
     }
+    
+    [Params(1, 100, 100_000)]
+    public int N;
 
     [Benchmark]
-    public CarDto AutoMapperMap()
+    public void AutoMapperMap()
     {
-        return _autoMapper.Map<CarDto>(_carModel);
+        for (int i = 0; i < N; i++)
+        {
+            _autoMapper.Map<CarDto>(_carModel);
+        }
     }
     
     [Benchmark]
-    public CarDto TinyMapperMap()
+    public void TinyMapperMap()
     {
-        return TinyMapper.Map<CarDto>(_carModel);
+        for (int i = 0; i < N; i++)
+        {
+            TinyMapper.Map<CarDto>(_carModel);
+        }
     }
     
     [Benchmark]
-    public CarDto MapperlyMap()
+    public void MapperlyMap()
     {
-        return _mapperlyMapper.Map(_carModel);
+        for (int i = 0; i < N; i++)
+        {
+            _mapperlyMapper.Map(_carModel);
+        }
     }
     
     [Benchmark]
-    public CarDto MapsterMap()
+    public void MapsterMap()
     {
-        return _carModel.Adapt<CarDto>();
+        for (int i = 0; i < N; i++)
+        {
+            _carModel.Adapt<CarDto>();
+        }
     }
 }
